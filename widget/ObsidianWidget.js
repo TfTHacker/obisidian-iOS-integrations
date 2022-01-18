@@ -37,7 +37,7 @@
 //    My Vault||folder||/folderPath
 //    My Vault||file||/folderPath/fileName.md
 
-const testParameter="MyVault||Starred";
+const testParameter="MyVault||Recent";
 
 const params = (args.widgetParameter ? args.widgetParameter : testParameter).split("||"); 
 const paramBookmark = params[0]; // in Scriptable settings, create a bookmark to your vault
