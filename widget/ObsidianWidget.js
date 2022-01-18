@@ -1,5 +1,5 @@
 // Developer: TfTHacker
-// Last update: 2022-01-15
+// Last update: 2022-01-18
 //
 // == Purpose ==
 // This Scriptable (https://scriptable.app) script creates a widget for iOS screen that pulls information 
@@ -37,7 +37,7 @@
 //    My Vault||folder||/folderPath
 //    My Vault||file||/folderPath/fileName.md
 
-const testParameter="MyVault||RECENT";
+const testParameter="MyVault||Starred";
 
 const params = (args.widgetParameter ? args.widgetParameter : testParameter).split("||"); 
 const paramBookmark = params[0]; // in Scriptable settings, create a bookmark to your vault
@@ -90,6 +90,7 @@ async function createWidget() {
   		else if(paramMode==="FILE") 
   			await displayFile(widget)
 	}
+	 widget.addSpacer();
     return widget;
 }
 
@@ -155,6 +156,7 @@ async function addItem(widget, doc, uriType="open") {
     const row = widget.addStack();
     const dot = row.addText( "• "  );
     const fileName = row.addText( doc.basename );
+    row.addSpacer();
     if (!config.runsWithSiri) {
 		const encodedPath = encodeURIComponent(doc.path);
 		if(uriType==="search")
