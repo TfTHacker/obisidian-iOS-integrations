@@ -1,5 +1,5 @@
 // Developer: TfTHacker
-// Last update: 2022-01-18
+// Last update: 2022-02-01
 //
 // == Purpose ==
 // This Scriptable (https://scriptable.app) script creates a widget for iOS screen that pulls information 
