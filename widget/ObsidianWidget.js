@@ -43,7 +43,7 @@ const params = (args.widgetParameter ? args.widgetParameter : testParameter).spl
 const paramBookmark = params[0]; // in Scriptable settings, create a bookmark to your vault
 const paramMode = params[1] ? (params[1]).toUpperCase() : "RECENT"; 
 const paramPath = params[2]; 
-const refreshRateInSeconds = 30;
+const refreshRateInSeconds = 300;
 
 const WIDGET_FONTS = {
     small: 		{ WIDGET_TITLE: 20, WIDGET_DESCRIPTION: 14, rowOutput: 5  },
